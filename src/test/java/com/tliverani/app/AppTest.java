@@ -6,16 +6,15 @@ import org.junit.Test;
 import model.JavaMailApp;
 import exceptions.MissAuthenticationException;
 import java.util.Calendar;
-/**
- * Unit test for simple App.
- */
+
+
 public class AppTest 
 {
 	
-	private final String user="t.liverani@hotmail.it";
-	private final String pass="Canecanis_200396";
+	private final String user="";
+	private final String pass="";
    
-   /*
+   
     @Test
     public void authenticateTest()
     {
@@ -115,17 +114,13 @@ public class AppTest
 			assert(false);
 		}
 	}
-	*/
+
 		
 		@Test 
 		public void connectionImpactTest(){
 			//sending 5 message with the same connection
 			JavaMailApp app=new JavaMailApp();
 			String msg="Messaggio di dimensione molto piccola";
-			/*
-			for (int j=0; j<3; j++)
-					msg=msg+msg;
-				*/
 			try{
 				app.authenticate(user, pass);
 				for(int i=0; i<5 ; i++)
